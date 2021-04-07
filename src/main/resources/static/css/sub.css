@@ -1,0 +1,298 @@
+
+
+
+
+body {font-family: 'NanumBarunGothic';}
+/*----------------- 웨딩 디테일 전체 ------------------------------*/
+#contents100{width:1280px; margin:0 auto;}
+#hall_view {border-top:solid 2px #787878;overflow:hidden;/*padding-bottom:50px;*/background:url('../images/common/view_rnb_bg.gif') left 660px repeat-y;margin-top:16px;}
+	/* 메인타이틀 */
+.bor_yes {border-top:solid 2px #8c3562;margin-bottom:15px;}
+#hall_view div.hall_title {border-bottom:solid 2px #eee; clear:both;background:#fff;}
+#hall_view div.hall_title ul.title {padding:13px 15px;overflow:hidden;background:#f9f9f9;border:solid 1px #d4d4d4;border-top:none 0;}
+#hall_view div.hall_title ul.title li {float:left;overflow:hidden;width:840px;}
+#hall_view div.hall_title ul.title li img.logo {display:block;float:left;border:solid 1px #c4c4c4;margin-right:20px;}
+#hall_view div.hall_title ul.title li p {float:left;color:#333; padding-top:2px; width:620px; }
+#hall_view div.hall_title ul.title li p strong {display:block;margin-bottom:5px;font-size:15px; line-height:25px;height:23px; overflow:hidden;}
+.font_strong{font-size:15px;line-height:18px;}
+#hall_view div.hall_title ul.title li.btn {float:right;text-align:right;width:403px; margin:10px 0 6px 0;}
+#hall_view div.hall_title ul.title li.btn span {width:80px; height:30px; line-height:30px; font-size:11px;  float:right; display:inline-block;  text-align:center;}
+	li.btn span a{color:#FFF;}															
+	/*.rightLink01{background:#9864ae; color:#FFF;}
+	.rightLink02{background:#cb8900;color:#FFF;}
+	.rightLink03{background:#5d97e6;color:#FFF;}
+	.rightLink04{background:#cd61a2;color:#FFF;}
+	.rightLink05{background:#ff6c00;color:#FFF;}*/
+	.rightLink01{background:#616161; color:#FFF;}
+	.rightLink02{background:#616161;color:#FFF;}
+	.rightLink03{background:#616161;color:#FFF;}
+	.rightLink04{background:#616161;color:#FFF;}
+	.rightLink05{background:#616161;color:#FFF;}
+		.rightLink01, .rightLink02, .rightLink03, .rightLink04,.rightLink05{ /*padding:4px 6px;*/}
+
+
+#hall_view div.view_sns {background:#fff;text-align:right;padding:2px 0;}
+	/* 메인사진*/
+#hall_view > div.hall_cont {width:930px;float:left;}
+/*빠른상담신청영역*/
+#hall_view > div.hall_rnb { width:315px;float:right;}
+	.rnb_customer{border:1px solid #ececec;}
+	.rnb_title_bx{text-align:center; margin:10px 0;}
+		.rnb_title_tx01,.rnb_title_tx02,.rnb_title_tx03{display:block;}
+		.rnb_title_tx01{font-size:18px; margin-bottom:11px;}
+		.rnb_title_tx02{font-size:24px; font-weight:600; margin-bottom:4px;}
+		.rnb_title_tx03{font-size:14px; margin-bottom:20px;}	
+		.rnb_customer .btn{text-align:center; margin-bottom:8px;}
+
+/*주변 웨딩홀 뉴스*/
+
+.rnb_nearNews .title{background:#4a4a4a; border:1px solid #000; width:287px; height:13px; padding:7px 13px 10px 13px; margin:10px 0 8px 0;}
+		.nearNews_topic{ font-size: 12px; color:#FFF; line-height:13px; display:inline-block;}
+		.more_right{float:right;}
+.rnb_nearNews li{height:100px; margin-bottom:5px; border-bottom:1px solid #dfdfdf;}		
+		.nearNews_pic{float:left; margin-right:20px}
+		.nearNews_pic2{float:left; width:127px;}
+		.nearNews_title{font-size: 11px; line-height:13px; color:#000; display:block; margin:4px 0 5px 0;}
+		.nearNews_date{font-size: 9px; color:#000; display:block;}
+		#a_hall_view{float:left;}
+		#a_hall_view_right{float:right; width:128px; }
+		#a_hall_view_right span{font-size: 11px; color:#bb9468; display:block; margin:4px 0 5px 0;}
+		#a_hall_view_right strong{font-size: 11px; color:#000; display:block;  margin-bottom:5px;}
+		#a_hall_view_right .bottom_text{font-size: 11px; color:#666666; line-height:12px;}
+			
+/*주변 웨딩홀 정보*/
+.rnb_nearHall .title{background:#4a4a4a; border:1px solid #000; width:287px; height:13px; padding:7px 13px 10px 13px; margin:10px 0 8px 0;}
+		.more_right{float:right;}
+.rnb_nearHall li{height:100px; margin-bottom:5px; border-bottom:1px solid #dfdfdf;}		
+		#a_hall_view{float:left;}
+		#a_hall_view_right{float:right; width:200px; }
+		#a_hall_view_right span{font-size: 11px; color:#bb9468; display:block; margin:4px 0 5px 0;}
+		#a_hall_view_right strong{ font-size: 11px; color:#000; display:block;  margin-bottom:5px;}
+		#a_hall_view_right .bottom_text{ font-size: 11px; color:#666666; line-height:12px;}
+	.rnb_banner li{margin-bottom:4px;}
+
+	/* 메인사진 */
+ .pic_box {border:solid 1px #d4d4d4;padding:10px 10px 0;width:1258px;height:555px;position:relative;margin-bottom:10px;}
+ .pic_box .big_img_area {float:left; width:930px; height:546px;position:relative; text-align:center;}
+ .layer_logo {position:absolute;left:0; top:0; z-index:5;}
+ .big_img{z-index:3;}
+ .recom {position:absolute;left:0;top:0; z-index:4;}
+					#small_img_wrap{float:right; width:320px; height:546px;  position:relative;}
+						  .pic_box span.up{position:absolute; left:142px; top:0;}
+						 .pic_box span.down {position:absolute; left:142px; bottom:-5px;}
+					#small_img_box{ width:243px;height:490px; margin:24px auto;}
+					#small_img_box .small_img{width:113px; height:66px; display:inline-block; float:left; margin:3px; position:relative;}
+					.small_img_hover{position:absolute; top:0; left:0;}
+					/*#small_img_box .small_img:hover{border:3px solid #F00;}*/
+	/* ���� ��� */
+div.hall_cont .relation_news {border:solid 1px #d4d4d4;margin-top:9px;padding:12px;height:66px;position:relative;overflow:hidden;}
+div.hall_cont .relation_news .imgs {display:block;float:left;width:100px;height:66px;margin-right:20px;}
+div.hall_cont .relation_news .news_txt {float:left;width:580px;font-size:11px;color:#000;letter-spacing:-0.1em;line-height:15px;}
+div.hall_cont .relation_news .news_txt strong, div.hall_cont .relation_news .news_txt span {display:block;margin-bottom:3px;}
+div.hall_cont .relation_news .news_txt a {color:#000}
+div.hall_cont .relation_news .btn {position:absolute;right:13px;top:12px}
+	/*상담신청 세부내용*/
+div.hall_cont .info_map {overflow:hidden;margin-top:10px;}
+div.hall_cont .info_map .info_area {float:left;width:520px; margin-bottom:20px;}
+div.hall_cont .info_area dl {overflow:hidden;width:480px;border:solid 1px #d4d4d4;padding:13px 20px 10px;}
+div.hall_cont .info_area dt {float:left;width:74px;height:24px;background:url(../images/dot_hall_info.gif) left 2px no-repeat;padding-left:7px;}
+
+	.info_Name{font-size:12px; color:#3f6d3f; display:block;}
+	.de_info_title{font-size:14px; color:#3f6d3f; display:block; }
+div.hall_cont .info_area dd {float:left;width:393px;height:24px;  color:#000; font-size:12px; overflow:hidden;}
+div.hall_cont .info_area dd .place_title_name {color:#8c3562; font-size:17px;   }
+div.hall_cont .info_area dd.address {letter-spacing:-0.1em;}
+div.hall_cont .info_area p {text-align:right;margin-top:5px;font-size:11px; line-height:16px;}
+div.hall_cont .info_area p span {cursor:pointer;}
+div.hall_cont .info_area p img {vertical-align:middle;}
+								.change_info{width:74px; height:16px; line-height:16px; float:right; text-align:center; border:1px solid #D4D4D4;
+								background:#d5d3d3;   font-size:10px; margin-left:10px;}
+
+/*지도검색*/
+div.hall_cont .info_map .map_area {float:right;width:398px; height:290px;}
+div.hall_cont .map_area .btn {overflow:hidden;}
+div.hall_cont .map_area .btn a {display:block;float:left;margin-left:2px;}
+div.hall_cont .map_area .btn a.first {margin-left:0}
+div.hall_cont .map_area .map_img {margin-top:5px; border:solid 1px #d4d4d4; height:265px;}
+div.hall_cont .map_area .map_img img {width:350px;height:261px;}
+
+/*btn_mid mgt20*/
+div.hall_cont .detail_info.mar20 div.btn_mid mgt20{text-align:center; margin:10px 0 20px 0;}
+
+	/*핫포인트 */
+div.hall_cont .hot_point {overflow:hidden;margin-top:30px;}
+
+div.hall_cont .hot_point h3 {background:#e2e2e2;text-align:left;}
+div.hall_cont .hot_point .hot_point_box {border:solid 1px #d4d4d4; border-top:none 0;padding:18px 18px 14px;line-height:17px; }
+div.hall_cont .hot_point .hot_point_box p{ color:#666; font-size:12px;}
+div.hall_cont .hot_point .btn {margin-top:6px;text-align:right;overflow:hidden;}
+div.hall_cont .hot_point .btn a {display:block;float:right;margin-left:4px;}
+	/*�����Ȳ*/
+div.hall_cont .hall_rental {overflow:hidden;margin-top:21px;}
+div.hall_cont .hall_rental h3 {background:#e2e2e2;text-align:left;clear:both;}
+div.hall_cont .hall_rental .rental_box {border:solid 1px #d4d4d4;border-top:none 0;padding:12px 10px 8px 20px;overflow:hidden;}
+div.hall_cont .rental_box table {}
+div.hall_cont .rental_box tbody td {border-bottom:none 0;padding:5px 0 6px;text-align:left;}
+div.hall_cont .rental_box tbody td.btn_box {text-align:right;padding:0;}
+div.hall_cont .rental_box tbody td.btn_box a {cursor:pointer;}
+div.hall_cont .rental_box tbody td strong {color:#000;}
+div.hall_cont .rental_box tbody td strong.brown {color:#8c3562;}
+	/* ����, ����Ʈī�� */
+div.hall_cont .hall_benefit {margin-top:26px;}
+div.hall_cont .hall_benefit li {margin-top:10px;}
+div.hall_cont .hall_benefit li:first-child {margin-top:0;}
+div.hall_cont .hall_benefit .coupon {background:url(../images/sub/coupon_bg.jpg) left top no-repeat;height:306px;text-align:center;}
+div.hall_cont .hall_benefit .coupon .name {display:block;padding-top:100px;font-size:22px;color:#000; line-height:24px;height:50px;}
+div.hall_cont .hall_benefit .coupon .name span{color:#a23c68}
+div.hall_cont .hall_benefit .coupon .data {padding-left:490px;font-size:11px;color:#000;line-height:18px;display:block;text-align:left;}
+div.hall_cont .hall_benefit .giftcard {background:url(../images/sub/giftcard_bg.jpg) left top no-repeat;height:306px;text-align:center;}
+div.hall_cont .hall_benefit .giftcard .name {display:block;padding-top:100px;font-size:22px;color:#c95998; line-height:24px;height:40px;}
+div.hall_cont .hall_benefit .giftcard .price {display:block;font-size:48px;color:#000;line-height:50px;height:76px;}
+div.hall_cont .hall_benefit .giftcard .price span {font-size:36px;}
+div.hall_cont .hall_benefit .giftcard .data {padding-left:282px;font-size:11px;color:#000;line-height:18px;display:block;text-align:left;}
+	
+	/*대구웨딩페어*/
+	.print_case img{width:930px;}
+	
+	/* 상세정보 이벤트 포토겔러리 */
+div.hall_cont .detail_info {margin-top:11px; margin-bottom:10px;}
+				#hall_info02{margin-top:30px;}
+				#hall_info04{margin-top:30px;}
+div.hall_cont .detail_info.mar20 {margin-top:20px;}
+div.hall_cont .detail_info ul.tab {height:38px;overflow:hidden;margin-bottom:11px; border-top:1px solid #dbdbdb; border-bottom:2px solid #9f7c60; }
+div.hall_cont .detail_info ul.tab li.on {border-right:1px solid #dbdbdb; background:#9f7c60;}
+div.hall_cont .detail_info ul.tab li.on a{ color:#FFF;}
+div.hall_cont .detail_info ul.tab li {float:left;width:231px; text-align:center;height:38px; border-right:1px solid #dbdbdb;}
+div.hall_cont .detail_info ul.tab li{line-height:16px;}
+div.hall_cont .detail_info ul.tab li:first-child {width:232px; line-height:16px;}
+div.hall_cont .detail_info ul.tab li:last-child{width:230px; border-right:0;  float:right;}
+
+	#hall_info04 .tab li:nth-child(3){width:234px;}
+div.hall_cont .detail_info ul.tab li a {height:16px;display:block;overflow:hidden;margin-top:13px;  font-size:15px; color:#666; line-height:1.1;}
+div.hall_cont .detail_info ul.tab li a img {margin-top:-15px;}
+div.hall_cont .detail_info ul.tab li.on a img {margin-top:0;}
+
+div.hall_cont .detail_info ul.tab .on:hover a{color:#FFF; font-size:14px;}
+				
+		/* 상세정보 */
+div.hall_cont .detail_info dl {overflow:hidden;padding:12px 0; margin-bottom:5px; background:url(../images/hall_detail_line.gif) left bottom repeat-x;}
+div.hall_cont .detail_info dt {float:left;width:100px;padding-left:12px;background:url(../images/dot_hall_info.gif) 4px 5px no-repeat;}
+div.hall_cont .detail_info dd {float:left;width:770px;padding-left:16px;background:url(../images/hall_detail_Bline.gif) left top no-repeat;line-height:16px;
+										 font-size:13px; color:#333;}
+div.hall_cont .detail_info dd.bus_location{line-height:22px;}
+div.hall_cont .detail_info dd img {vertical-align:middle; margin-bottom:5px;}
+
+			.detail_info span.ico_boxstyle box_purple{background-color:#b55fd4;}
+				.ico_boxstyle box_pink{}
+				.ico_boxstyle box_orange{}
+
+	/*예식장정보*/
+div.hall_cont .detail_info .table_box {padding:12px 0;background:url(../images/hall_detail_line.gif) left bottom repeat-x;}
+div.hall_cont .detail_info .tit {padding-left:12px;background:url(../images/dot_hall_info.gif) 4px 5px no-repeat; margin:5px 0;}
+							
+div.hall_cont .detail_info table.detail_hall {width:100%;}
+div.hall_cont .detail_info table.detail_hall thead th {border-top:solid 1px #ddd;border-bottom:solid 1px #ddd;border-left:solid 1px #ddd;background:#f6f6f6;padding:10px 0 8px;text-align:Center;font-weight:bold;color:#604841;font-size:12px;}
+div.hall_cont .detail_info table.detail_hall thead th.first {border-left:none 0;}
+div.hall_cont .detail_info table.detail_hall tbody td {border-top:solid 1px #ddd;border-bottom:solid 1px #ddd;border-left:solid 1px #ddd; padding:10px 10px 8px;text-align:center;  font-size:13px; color:#333; vertical-align:middle;}
+div.hall_cont .detail_info table.detail_hall tbody td img{margin-top:5px;}
+div.hall_cont .detail_info table.detail_hall tbody td.first {border-left:none 0;}
+																
+div.hall_cont .detail_info table.detail_hall tbody td.bigo {background:#f6f6f6;font-weight:bold;color:#8c3562;  }
+div.hall_cont .detail_info table.detail_hall tbody td.bigo_txt {text-align:left;padding:10px 10px 8px; font-size:11px;color:#8c3562; line-height:1.4;}
+																.style9{line-height:15px; }
+div.hall_cont .detail_info table.detail_hall tbody td.txt_left {text-align:left;padding:10px 10px 8px; line-height:15px;}
+div.hall_cont .detail_info table.detail_hall tbody td.txt_left p{line-height:15px;}
+div.hall_cont .detail_info table.detail_hall tbody td.info {padding:10px 15px 8px; width:120px; line-height:15px;}
+.foodimg_wrap{text-align:center; margin:15px auto 0 auto; width:896px; height:470px; border:1px solid #ddd;}
+div.hall_cont .detail_info .img_slide {overflow:hidden; margin:8px 0 0 0; position:relative; }
+div.hall_cont .detail_info .img_slide li {float:left;}
+div.hall_cont .detail_info .img_slide li.prev {width:24px;text-align:right; position:absolute; top:17px;left:8px;}
+div.hall_cont .detail_info .img_slide li.next {width:24px;text-align:left; position:absolute; top:17px; right:8px;}
+								.small_img{position:relative;}
+								.food_small_img_hover{position:absolute; left:0; top:0; }
+ 								#view_food_image_wrap{width:842px; overflow:hidden; margin:0 auto;}
+div.hall_cont .detail_info .img_slide li.small_img {width:82px;text-align:left;overflow:hidden; margin:1px;}
+div.hall_cont .detail_info .img_slide li.small_img a {display:block;width:78px;margin:0 3px 6px;float:left;}
+div.hall_cont .detail_info .img_slide li.small_img img {width:78px;height:65px;}
+div.hall_cont .detail_info p.info_txt {margin-top:10px;}
+div.hall_cont .hall_video .video {text-align:center;}
+div.hall_cont .hall_video .video .btn {text-align:center;margin-bottom:5px;}
+div.hall_cont .event_title {padding-left:10px;margin-top:30px;}
+div.hall_cont .event_box_top {height:64px;background:url(../images/sub/detail_event_bg_top.gif) left top no-repeat;}
+div.hall_cont .event_box span.event_info {display:block;padding:0 20px;color:#8c3562}
+div.hall_cont .event_editor {margin-top:15px;}
+div.hall_cont .detail_info .video {text-align:center; z-index:10;}
+div.hall_cont .detail_info .video .btn {text-align:center;margin-bottom:5px;}
+div.hall_cont .detail_info .ground_plan {text-align:center;}
+	/* �������̵� ���� */
+div.hall_cont table.hall_guide_info {width:100%;table-layout:fixed;border-top:solid 1px #ddd;margin-top:30px;}
+div.hall_cont table.hall_guide_info th {text-align:left;background:#444;border-bottom:solid 1px #fff;padding:8px 18px;}
+div.hall_cont table.hall_guide_info td {text-align:left;padding:8px 18px;border-bottom:solid 1px #ddd;color:#555}
+	/* �������̵� ������Ʈ */
+div.hall_cont div.hot_point2 {border:solid 1px #ece2dd;margin-top:40px;}
+div.hall_cont div.hot_point2 h3 {border-bottom:solid 1px #ece2dd;background:url('../images/sub/bg_hotpoint.gif') left top no-repeat; height:35px;line-height:35px; font-size:15px;padding:0 15px;color:#333;font-weight:700}
+div.hall_cont div.hot_point2 h3 > span {color:#99246c}
+div.hall_cont div.hot_point2 > div.hot_point_box {padding:15px; line-height:1.4em;}
+	/* �������̵� ������ */
+div.hall_cont div.movie_box {margin-top:40px;}
+div.hall_cont div.movie_box h3 {background:#e2e2e2;text-align:left;}
+div.hall_cont div.movie_box .video {text-align:center;margin-top:20px;}
+div.hall_cont div.movie_box .video .btn {text-align:center;margin-bottom:5px;}
+	/* �������̵� ���� */
+div.hall_cont div.map_box {margin-top:40px;}
+div.hall_cont div.map_box h3 {background:#e2e2e2;text-align:left;}
+div.hall_cont div.map_box > .map {text-align:center;width:691px;margin:20px auto 0;}
+div.hall_cont div.map_box > .map .btn {text-align:left;margin-bottom:5px;}
+
+/*이벤트*/
+.detail_info_event{width:918px; background:#f8f8f8; padding:10px 5px; border:1px solid #9f7c60; -webkit-border-radius:5px; -moz-border-radius:5px; -ms-border-radius:5px;
+					behavior:url(/PIE-1.0.0/PIE.htc); /*IE*/}
+.info_event_tx1{ margin:10px 0;}
+.event_box_top{display:block; }
+.event_info_tx{ line-height:22px; margin:0 0 10px 15px; display:block; color:#8e375d; font-size:16px;}
+.event_editor{margin-bottom:20px; text-align:center;}
+.event_box_bottom{margin-bottom:30px;  text-align:center; color:#666666; font-size:12px; line-height:16px;}
+
+ /*=========================웨딩홀 이벤트=============================*/
+ .ENT_wrap{width:1280px; margin:0 auto; overflow:hidden;}
+ 	.ENT_ul_bx{width:100%; border-top:1px solid #e2e2e2; border-bottom:1px solid #e2e2e2;}
+		.ENT_li_line{width:100%; overflow:hidden; padding:8px 0; border-bottom:1px solid #e2e2e2;}
+		.ENT_li_line:last-child{border-bottom:0;}
+		.ENT_detail_bx{float:left;}
+		.ENT_detail_bx:nth-of-type(1){width:75px; text-align:center;}
+			.ENT_detail_bx:nth-of-type(1) p{padding:31.5px 0 31.5px 0;}
+		.ENT_detail_bx:nth-of-type(2){width:124px;}
+			.ENT_detail_bx:nth-of-type(2) p{}
+			.ENT_detail_bx:nth-of-type(2) p img{display:block;}
+		.ENT_detail_bx:nth-of-type(3){width:230px;padding-top:10px;}
+			.ENT_detail_ttx01,.ENT_detail_ttx02,.ENT_detail_ttx03{ height:17px; overflow:hidden;}
+			.ENT_detail_ttx01{display:block; font-size:16px; color:#373637; font-weight:500; margin-bottom:5px;}
+			.ENT_detail_ttx02{display:block; font-size:14px; color:#666666; margin-bottom:5px;}
+			.ENT_detail_ttx03{display:block; font-size:14px; color:#666666;}
+		.ENT_detail_bx:nth-of-type(4){width:468px; height:55px; overflow:hidden;padding-top:10px;}
+			.ENT_detail_ttx04{display:block; width:435px; line-height:1.3; font-size:14px;}
+		.ENT_detail_bx:nth-of-type(5){width:43px; padding-top:10px; text-align:center; margin-right:28px;}	
+			.ENT_detail_OC{font-size:12px; display:block;}
+		.ENT_detail_bx:nth-of-type(6){width:182px; padding-top:10px;}
+			.ENT_detail_ttx05{display:block; font-size:14px;}
+		.ENT_detail_bx:nth-of-type(7){width:106px; float:right;}
+			.ENT_detail_ttx06,.ENT_detail_ttx07{display:block;width:100px; text-align:center; margin:6px 0; padding:7px 2px; font-size:14px; cursor:pointer;}
+			.ENT_detail_ttx06{ background-color:#ffa800; color:#FFF;}
+			.ENT_detail_ttx07{ background-color:#02c739; color:#FFF;}
+				.ENT_detail_ttx06:hover{color:#e45c26;}
+				.ENT_detail_ttx07:hover{color:#e45c26;}
+ .hall_event_wrap{width:1200px; margin:0 auto; overflow:hidden; margin-bottom:15px;}
+ .hall_Einbox{width:600px; float:left; overflow:hidden; margin-bottom:10px;}
+ 	.hall_Ein_pic{float:left; margin-right:10px;}
+	.hall_Ein_text{float:left; width:350px; height:205px; position:relative;}
+		.hall_Ein_title{display:block; font-family: 'NanumBarunGothic';  font-size:14px; line-height:16px; color:#000; margin:5px 0;}
+ 		.hall_Ein_date{display:block;  font-family: 'NanumBarunGothic';  font-size:12px; line-height:14px; color:#999999; margin-bottom:15px;}
+ 			.hall_Ein_day{font-family: 'NanumBarunGothic';  font-size:10px; line-height:12px; color:#999999; margin-bottom:5px;}
+ 			.hall_Ein_detail_tx{display:block; font-family: 'NanumBarunGothic';  font-size:12px; line-height:14px; color:#000; margin-bottom:10px;}
+ 		.hall_Ein_qna{display:block; line-height:30px; text-align:center; background:#b9b1ea;
+							background: -moz-linear-gradient(top, #c4bcef, #b9b1ea);
+							background: -ms-linear-gradient(top, #c4bcef, #b9b1ea);
+							background: -webkit-linear-gradient(top, #c4bcef, #b9b1ea);
+							border: 1px solid #b9b1ea;
+							position:absolute; bottom:0; left:0; width:133px; cursor:pointer;}
+		.hall_Ein_qna a{font-family: 'NanumBarunGothic'; font-size:11px; color:#fff; cursor:pointer;}

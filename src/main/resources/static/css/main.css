@@ -1,0 +1,621 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {font-family: 'NanumBarunGothic';}
+ul,dl,ol,li {list-style:none;}
+a{text-decoration:none; color:#000; font-family: 'NanumBarunGothic';}
+
+.wrap{width:100%; min-width:1280px; position:relative;}
+
+/*----------top 영역----------*/
+.main_top_wrap{width:100%; overflow:hidden; position:fixed; z-index:200;}
+	.main_topbx_01{width:100%; height:36px; background-color:#000; /*position:fixed;*/}
+	.main_favor{width:1280px; margin:0 auto; overflow:hidden;}
+	.main_favor_inbx{float:right; font-size:12px; padding:12px 0; margin-right:20px;}
+		.main_favor_inbx span{display:inline-block; color:#FFF;}
+		.main_favor_inbx span a{color:#FFF;}
+		.main_favor_inbx span:nth-child(1){margin-right:4px;}
+		.main_favor_inbx span:nth-child(2){margin:0 4px 0 4px;}
+		.main_favor_inbx span:nth-child(3){margin-right:4px;}
+	
+	.main_favor_inbx02{padding:8px 0; float:right; margin-right:42px;}
+		.main_favor_inbx02 span{display:inline-block; padding:0 1px;}
+
+
+/*--------------------여기부터 메뉴리스트 영역--------------------*/	
+	.main_topbx_02{width:100%; overflow:hidden; border-bottom:1px solid  #e2e2e1; height:72px; /*position:fixed; margin-top:36px;*/ background-color:#FFF;}
+		.main_menu_wrap{width:1280px; margin:0 auto; overflow:hidden;}
+			.main_logobx{float:left; width:184px; margin-left:60px;}
+				.main_logoimg{display:block; width:184px; cursor:pointer;}
+			.main_title_menu{float: right; margin-right:40px;}
+				.main_title_menu span{font-size:20px; width:126px; text-align:center;  display:inline-block;}
+				.main_title_menu span:last-child{padding-right:0;}
+				.main_title_menu span{font-size:20px;}
+				.M_ttl_menu{border-bottom:3px solid #000;}
+				
+			.main_title_menu{-webkit-transition: .6s ease-in;	-moz-transition: .6s ease-in;	transition: .6s ease-in; height:72px;}
+			.main_title_menu a{display:inline-block;}
+			.main_title_menu span{display: inline-block;position: relative; color: #222; font-size:20px; width:129px; text-align:center; display:inline-block; padding:26px 0 23px 0; margin:0 15px;}
+			.main_title_menu span:after{-webkit-transition: .3s;	-moz-transition: .3s;	transition: .3s;position: absolute;	bottom: -2px; left: 50%;
+	content: " ";	width: 0;	height: 2px;	background-color: #000;}
+			.main_title_menu a:hover{color:#f73e1a;}
+			.main_title_menu a:hover .M_ttl_menu:after{left: 0;	width: 100%;}
+/*--------------------//메뉴리스트 끝--------------------*/
+
+/*-------------------- 오버 메뉴리스트 시작--------------------*/
+	.main_submenu_wrap{width:100%; overflow:hidden; margin:0 auto; background-color:#FFF; height:260px;  border-bottom:1px solid #d6d6d6; position:fixed; top:166px; z-index:200;}
+		.main_submenu_inbx{width:1238px; margin:0 auto; overflow:hidden;}
+			.main_submenu_part01,.main_submenu_part02,.main_submenu_part03,.main_submenu_part04,.main_submenu_part05,.main_submenu_part06{width:100%; clear:both;}
+				.MSub_bx_01,.MSub_bx_02,.MSub_bx_03,.MSub_bx_04{float:left;}
+				.MSub_bx_01{width:226px; float:left; margin-top:27px; padding-left:33px;}
+					.MSub_text_wrap{width:100%; margin-bottom:67px; overflow:hidden;}
+						.MSub_ttx01{font-size:14px; color:#adadad; line-height:20px; width:100%; display:block; float:left; margin:5px;}
+						.MSub_ttx02{font-size:30px; color:#adadad; line-height:36px; width:100%; display:block; float:left;}
+						.MSub_bx_01,.MSub_bx_02,.MSub_bx_03,.MSub_bx_04,.MSub_bx_05,.MSub_bx_06{position:relative;}
+						.MSub_bx_01 p{width:150px; float:left; position:absolute; left:33px; bottom:-7px; }
+						.MSub_bx_01 p img{display:inline-block;}
+				.MSub_bx_02{width:409px; float:left; height:260px;}
+					.MSub_bx_02 ul{margin-top:25px; padding:0 0 25px 0; height:178px; border-left:1px solid #e0e0e0; border-right:1px solid #e0e0e0; /*f0f0f0*/ }
+					.MSub_bx_02 ul li{ margin:0 70px 7px 70px; display:block; width:225px; padding:0 5px; font-size:14px; height:30px; color:#131313; line-height:30px;}
+					.MSub_bx_02 ul li a{color:#131313; display:inline-block;}
+					
+					.MSub_bx_02_div01{width:182px; float:left;}
+					.MSub_bx_02_div02{width:182px; float:left;}
+				.MSub_bx_03{width:358px; float:left;}
+					.MSub_bx_03 p{padding:28px 0 28px 0;}
+					.MSub_bx_03 p img{display:block; margin:0 auto; padding-left:10px;}
+				.MSub_bx_04{width:200px; float:right; height:134px; margin:26px 0;}
+					.MSub_bx_04_inbx{width:100%;}
+					.MSub_bx_04_inbx p{width:100%; margin:2px 0 9px 0; overflow:hidden;}
+					.MSub_bx_04_inbx p img{display:block; float:right;}
+				
+/*--------------------메뉴리스트 끝--------------------*/
+/*--------------------  서브메뉴 시작--------------------*/
+	.main_topbx_03{width:100%; overflow:hidden; border-bottom:1px solid  #e2e2e1; /*position:fixed; margin-top:109px;*/ background-color:#FFF;}	
+		.main_subinbx{width:1280px; margin:0 auto}	
+		.main_sub_menu{width:100%;}
+			.m_allmenu,.m_weddinghall,.m_sdm,.m_honsu,.m_honey,.m_after{float:left; display:inline-block; height:56px; padding:0 1.9px;}
+			.m_allmenu{ border-left:1px solid  #e2e2e1; border-right:1px solid  #e2e2e1; /*margin-left:33px;*/ position:relative;}
+				.m_allmenu span,.m_weddinghall span,.m_sdm span,.m_honsu span,.m_honey span,.m_after span{float:left; cursor:pointer; font-size:16px; display:inline-block; padding:20px 8.1px 10px 8.1px; margin:0 12px; text-align:center; }
+				
+				/*---------- 메뉴 줄생기기 ----------*/
+				.m_weddinghall,.m_sdm,.m_honsu,.m_honey,.m_after{-webkit-transition: .6s ease-in;	-moz-transition: .6s ease-in;	transition: .6s ease-in;}
+				.m_weddinghall a, .m_sdm a, .m_honsu a, .m_honey a, .m_after a{float:left; display:inline-block;}
+				.m_weddinghall a span, .m_sdm a span, .m_honsu a span, .m_honey a span, .m_after a span{display: inline-block;position: relative;}
+				
+				.M_Sub_ttl{border-bottom:2px solid #f73e1a; color:#f73e1a;}
+				.m_weddinghall a span:before{bottom: -2px; left: 50%; position:absolute; 	content: " ";width: 0; height: 2px;background-color: #f73e1a;
+				-webkit-transition: .3s;	-moz-transition: .3s;	transition: .3s;}
+				.m_sdm a span:before{bottom: -2px; left: 50%; position:absolute; 	content: " ";width: 0; height: 2px;background-color: #f73e1a;
+				-webkit-transition: .3s;	-moz-transition: .3s;	transition: .3s;}
+				.m_honsu a span:before{bottom: -2px; left: 50%; position:absolute; 	content: " ";width: 0; height: 2px;background-color: #f73e1a;
+				-webkit-transition: .3s;	-moz-transition: .3s;	transition: .3s;}
+				.m_honey a span:before{bottom: -2px; left: 50%; position:absolute; 	content: " ";width: 0; height: 2px;background-color: #f73e1a;
+				-webkit-transition: .3s;	-moz-transition: .3s;	transition: .3s;}
+				.m_after a span:before{bottom: -2px; left: 50%; position:absolute; 	content: " ";width: 0; height: 2px;background-color: #f73e1a;
+				-webkit-transition: .3s;	-moz-transition: .3s;	transition: .3s;}
+				
+					.m_allmenu span:hover{color:#f73e1a;}
+					
+					.m_weddinghall a:hover{color:#f73e1a;}
+					.m_sdm a:hover{color:#f73e1a;}
+					.m_honsu a:hover{color:#f73e1a;}
+					.m_honey a:hover{color:#f73e1a;}
+					.m_after a:hover{color:#f73e1a;}
+					
+					.m_weddinghall a:hover span:before{left: 0;	width: 100%;}
+					.m_sdm a:hover span:before{left: 0;	width: 100%;}
+					.m_honsu a:hover span:before{left: 0;	width: 100%;}
+					.m_honey a:hover span:before{left: 0;	width: 100%;}
+					.m_after a:hover span:before{left: 0;	width: 100%;}
+					
+					.m_sdm span:hover{color:#f73e1a;}
+					.m_honsu span:hover{color:#f73e1a;}
+					.m_honey span:hover{color:#f73e1a;}
+					.m_after span:hover{color:#f73e1a;}
+				/*---------- //메뉴 줄생기기끝 ----------*/	
+				.m_all_linebx{ position:absolute; left:16px; top:18px;}
+				.m_all_line{displa:block;}
+				.m_allmenu span{ padding-left:50px;}
+			.m_weddinghall{ border-right:1px solid  #e2e2e1;}
+			.m_sdm{ border-right:1px solid  #e2e2e1;}
+			.m_honsu{ border-right:1px solid  #e2e2e1;}
+			.m_honey{ border-right:1px solid  #e2e2e1;}
+			.m_after{ border-right:1px solid  #e2e2e1;}
+
+/*--------------------전체링크메뉴 영역--------------------*/		
+	.all_menu_wrap{width:100%; margin:0 auto; height:373px;}
+		.all_menu_inbx{width:1220px; margin:0 auto; padding:30px; overflow:hidden;}
+		.all_01,.all_02,.all_03,.all_04,.all_05,.all_06,.all_07{width:200px; float:left; margin-right:10px;}
+		.all_title_bx{font-size:16px; line-height:38px; margin-bottom:11px; text-align:center; margin-right:20px; color:#333;}
+		
+		.all_04_05_wrap,.all_06_07_wrap{width:200px; float:left; margin-right:10px;}
+			.all_04,.all_06{height:200px;}
+			
+		.all_close_wrap{width:50px; float:right;/* padding-right:5px;*/}
+		.all_close_wrap p{width:50px;}
+		.all_close_wrap p img{ display:block; cursor:pointer;}
+			.all_ul_bx{}
+			.all_ul_bx01,.all_ul_bx02{ float:left; width:145px;}
+				.all_ul_bx01 li{font-size:16px; padding:6px 0 6px 8px; line-height:20px; color:#131313;}
+				.all_ul_bx01 li a{color:#131313;}
+
+				.all_ul_bx02 li{font-size:16px; padding:6px 0 6px 8px; line-height:20px; color:#131313;}
+				.all_ul_bx02 li a{color:#131313;}
+			.all_ul_bx li{font-size:16px; padding:6px 0 6px 8px; line-height:20px; color:#131313;}
+			.all_ul_bx li a{color:#131313;}
+	
+/*--------------------전체링크메뉴 영역 끝--------------------*/		
+					
+/*--------------------여기부터 웨딩비용영역--------------------*/				
+	.m_cost_title{width:1280px; margin:0 auto; overflow:hidden; text-align:center; margin-top:50px;}
+	.m_cost_title:first-child{margin-top:50px;}
+		.m_cost01{ font-size:38px; color:#ff6036; margin-bottom:10px; line-height:1.2;}
+		.m_cost02{ font-size:49px; color:#3c3c3c; margin-bottom:20px; line-height:1.2;}
+		.m_cost03{color:#3c3c3c; font-size:24px; margin-bottom:30px; line-height:1.2; color:#7d7d7d;}
+	
+	.m_cost_warp{width:100%; clear:both; background-image:url(../images/longline.png); background-repeat:repeat-x; overflow:hidden;}
+		.m_cost_inbx{width:1280px; margin:0 auto;}
+			.m_cost_listbx{width:412px; overflow:hidden; position:relative; float:left; }
+			.m_cost_listbx:nth-child(1){margin-right:18px;}
+			.m_cost_listbx:nth-child(2){margin-right:18px;}
+			.m_cost_listbx p{width:100%;}
+			.m_cost_listbx p img{display:block;}
+			.m_cost_listbx span{ width:332px; padding:50px 0; text-align:center; font-size:28px;  position:absolute; left:40px; bottom:35px; color:#FFF; line-height:1.1;}
+			.m_cost_listbx span a{color:#FFF;}
+			.m_cost_hall{background-color:#0b9adc;}
+			.m_cost_sdm{background-color:#fd586f;}
+			.m_cost_honey{background-color:#0bdccb;}
+/*-------------------- // 웨딩비용영역 끝--------------------*/	
+		
+/*-------------------- 여기부터 웨딩홀 맞춤 브리핑서비스 시작--------------------*/
+	.m_hall_service{width:1278px; margin:0 auto; overflow:hidden; border:1px solid #e9e9e9; margin-bottom:50px;}
+		.m_hall_svbx01{width:380px; float:left;}
+		.m_hall_svbx01 p{width:100%;}
+		.m_hall_svbx01 p a img{display:block;}
+		
+		.m_hall_svbx02{float:left; width:517px; padding:60px 0 60px 0; }
+			.hall_svtitle01{display:block; font-size:21px; color:#939393; margin-bottom:12px; text-align:center; line-height:1.2;}
+			.hall_svtitle02{display:block; font-size:29px; color:#454545; margin-bottom:30px; text-align:center;line-height:1.2;}
+				.hall_sv_inputbx{width:100%; text-align:center; padding:0 66px; overflow:hidden; margin-bottom:26px;}
+					.sv_input{background-color:#dedede; width:315px;font-size:20px; padding:28px 5px; border:0; float:left;}
+					.sv_search{display:inline-block; font-size:20px; padding:29.5px 14px; background-color:#858585; color:#FFF;float:left; cursor:pointer;}
+					.hotplace{clear:both;width:500px; color:#565656; display:block; text-indent: 68px; font-size:19px; line-height:1.2;}
+					
+		.m_hall_svbx03{width:380px; float:right;}
+		.m_hall_svbx03 p{width:100%;}
+		.m_hall_svbx03 p a img{display:block;}
+/*-------------------- // 웨딩홀 맞춤 브리핑서비스 끝--------------------*/
+	.m_hotHall_inbx{width:1280px; margin:0 auto; overflow:hidden; }
+		.m_hotHall_title{width:100%; margin-bottom:35px; overflow:hidden;}
+			.m_hotHall_title p{width:100%;}
+			.m_hotHall_title p img{ display:block;}
+			.m_hotHall_text{width:100%; text-align:center; display:block; font-size:36px; color:#3c3c3c; margin-top:-46px; line-height:1.2;}
+		
+		.m_hotHall_list{width:100%; overflow:hidden;}
+			.m_hotHall_onebx{width:227px; display:inline-block; border:1px solid #e4e4e4; margin:0 9px;}
+			.m_hotHall_onebx:first-child{}
+			.m_hotHall_onebx:last-child{margin-right:0;}
+				.m_hotHall_pic{width:100%;}
+					.m_hotHall_pic a{display:block;}
+					.m_hotHall_pic img{display:block;}
+				.m_hotHall_Txbx{width:227px; text-align:center;}
+					.m_hotHall_name{font-size:16px; font-weight:600; width:100%; margin:10px 0 5px 0; color:#383736; text-indent:10px; line-height:1.2; height:19px; overflow:hidden;}
+					.m_hotHall_name a{font-size:16px;color:#383736;}
+					.m_hotHall_detail{font-size:14px; margin-bottom:2px; color:#6a6a6a; padding:0 10px; line-height:1.3;}
+					.m_hotHall_price{font-size:13px;color:#6a6a6a; line-height:1.2; margin-bottom:10px}
+					.m_hotHall_name,.m_hotHall_detail,.m_hotHall_price{display:block;}
+
+.m_inpic_wrap{margin:0 auto; margin-top:20px;}	
+	.m_inpic_bx img{display:block;}
+/*-------------------- 여기부터 인기브랜드를 한자리에 시작--------------------*/
+	.m_brand_wrap{width:1280px; margin:0 auto; overflow:hidden;}
+		.m_Brnd_Boxes{width:100%; overflow:hidden;}
+			.Boxes_01{width:100%; overflow:hidden; margin-bottom:4px;}
+				.Boxes_big_bx{width:426px; height:470px; display:inline-block; float:left; margin-right:1px; position:relative;}
+					.Boxes_big_bx:last-child{margin-right:0;}
+				.Boexes_pic{width:100%;}
+				.Boexes_pic img{ display:block;}
+				.Boxes_name_bx{width:100%; text-align:center; margin-top:-52px;}
+				.Boxes_name{color:#FFF; font-size:18px; padding:6px 11px; /*width:93px; */border:1px solid #FFF; display:inline-block;}
+				
+				.back_bg{width:100%; position:absolute; top:0px; left:0; display:none; z-index:2;}
+					.back_bg img{display:block;}
+				.Bhover_tx{width:90%; vertical-align:middle; position:absolute; top:0; left:0; right:0; bottom:1%; margin:auto; padding:0 5%; height:10%; display:none; z-index:3;}
+					.Bhover_title{width:100%; text-align:center; font-size:24px; color:#FFF; display:block;  margin-bottom:10px;}
+						.Bhover_title a{color:#FFF; cursor:pointer;}
+					.Bhover_explain{width:100%; text-align:center; font-size:16px; color:#FFF; display:block;}
+						.Bhover_explain a{ color:#FFF; cursor:pointer;}
+					.Bhover_studio_bx{width:100%; text-align:center;/* margin-top:-32px;*/ position:absolute; display:none; z-index:3;}
+						.Bhover_studio_tx{color:#FFF; font-size:18px; padding:6px 11px; /*width:93px;*/ border:1px solid #FFF; display:inline-block;}
+						.Bhover_studio_tx a{color:#FFF;}
+					
+				
+				/*오버 작동시작*/
+				.Boxes_big_bx:hover .Bhover_tx{display:block;}
+				.Boxes_big_bx:hover .back_bg{display:block;}
+				.Boxes_big_bx:hover .Boxes_name{display:none;}
+				.Boxes_big_bx:hover .Bhover_studio_bx{display:block;}
+				/*오버 작동 끝*/
+				
+			.Boxes_02{width:100%; overflow:hidden;}
+				.Boxes_sm_bx{width:318px; height:240px; display:inline-block; float:left; position:relative;}
+				.Boxes_sm_bx:nth-child(1){margin-right:2px;}
+				.Boxes_sm_bx:nth-child(2){margin-right:4px;}
+				.Boxes_sm_bx:nth-child(3){margin-right:2px;}
+				.Boexes_sm_pic{width:100%;}
+					.Boexes_sm_pic img{width:100%;}
+				.Boxes_sm_name_bx{width:100%;text-align:center; margin-top:-52px;}
+					.Boxes_sm_name{color:#FFF; font-size:18px; padding:6px 11px; /*width:93px;*/ border:1px solid #FFF; display:inline-block;}
+				/*작은거 중간글씨*/
+				.sm_hover_CNtx{width:90%; vertical-align:middle; position:absolute; top:0; left:0; right:0; bottom:1%; margin:auto; padding:35% 5% 44% 5%;; height:10%;  display:none;}
+					.sm_hover_CNtitle{width:100%; text-align:center; font-size:21px; color:#FFF; display:block;  margin-bottom:10px;}
+						.sm_hover_CNtitle a{color:#FFF; cursor:pointer;}
+					.sm_hover_CNexplain{width:100%; text-align:center; font-size:14px; color:#FFF; display:block;}
+						.sm_hover_CNexplain a{ color:#FFF; cursor:pointer;}
+						
+				/*작은오버시작*/
+				.sm_hover_bg{position:absolute; top:0; left:0; display:none; z-index:2;}
+				.sm_hover_tx{width:100%; text-align:center; /*margin-top:32px;*/ position:absolute; bottom:16px; display:none;z-index:3;}
+				.sm_hover_name{color:#FFF; font-size:18px; padding:6px 11px; /*width:93px;*/ border:1px solid #FFF; display:inline-block; }
+				.sm_hover_name a{color:#FFF;}
+				
+				.Boxes_sm_bx:hover .Boxes_sm_name_bx{display:none;}
+				.Boxes_sm_bx:hover .sm_hover_bg{display:block;}
+				.Boxes_sm_bx:hover .sm_hover_tx{display:inline-block;}
+				.Boxes_sm_bx:hover .sm_hover_CNtx{display:block;}
+				/*작은오버 끝*/
+/*-------------------- // 인기브랜드를 한자리에 끝--------------------*/
+
+/*-------------------- 페이백웨딩 시작--------------------*/
+	.PB_wrap{width:100%; overflow:hidden; margin-bottom:75px;}
+		.PB_bx02{width:100%; background-image:url(../images/PB_backimg.jpg); background-repeat:no-repeat;}
+		.PB_inbx{width:1280px; margin:0 auto; overflow:hidden; position:relative; padding:60px 0 40px 0;}
+			/*.PB_arrow_bx{position:absolute; top:202px; width:1280px; margin:0 auto; z-index:3;}
+			.PB_left{width:70px; float:left;}
+				.PB_left img{display:block;}
+			.PB_right{width:70px; float:right;}
+				.PB_right{display:block;}*/
+			.PB_left, .PB_right{margin-top:151px; cursor:pointer;}
+			.PB_left{width:45px; float:left;}
+				.PB_left img{display:block;}
+			.PB_right{width:45px; float:right;}
+				.PB_right{display:block;}
+				
+			.PB_onebx{width:378px; float:left; margin-right:15px;}
+			
+			.PB_onebx:last-child{margin-right:0;}
+			
+			.PB_top_pic{width:100%;}
+			.PB_top_pic img{display:block; cursor:pointer;}
+			.PB_text_bx{width:100%; text-align:center; padding:25px 0; background-color:#FFF;}
+				.PB_title01,.PB_title02{dislplay:block;line-height:1.2;}
+				.PB_title01{ font-size:20px; color:#0b6de6; margin-bottom:10px; margin-top:5px; display:block; height:24px; overflow:hidden;}
+				.PB_title02{ color:#1a1a1a; font-size:18px; height:24px; display:inline-block; overflow:hidden;}
+			
+			.PB_plus_wrap{width:100%; text-align:center; clear:both; padding-bottom:46px;}
+				.PB_plus_bx{width:305px; padding:19px 0; line-height:1.2; color:#010101; font-size:17px; background-color:#FFF; display:inline-block;}
+				.PB_img{display:inline-block; margin-right:4px;}
+				.PB_plus_bx a{ color:#010101; cursor:pointer;}
+/*-------------------- // 페이백웨딩 끝--------------------*/
+	
+/*--------------------  페이백 제휴 파트너 시작--------------------*/
+	.PB_partner_wrap{width:1280px; margin:0 auto; overflow:hidden; text-align:center; margin-bottom:75px;}
+		.PB_partner_wrap ul{}
+		.PB_partner_wrap ul li{width:154px; height:52px; float:left;  margin:0 4px 4px 0; display:inline-block; display:block; float:left;}
+/*--------------------  // 페이백 제휴 파트너 끝--------------------*/
+	
+
+
+.top_bx{width:100%; margin:0 auto; overflow:hidden; border-bottom:1px solid #e5e5e5; height:96px;}
+	.top_in_bx{width:1280px; margin:0 auto; }
+	
+	.top_left_bx{width:310px; float:left; position:relative;}
+	.top_mbc{width:100%;}
+		.top_mbc>img, .top_left_btn>img, .top_right_btn>img{display:block;}
+	.top_left_btn{position:absolute; bottom:16px; right:16px; cursor:pointer;}
+		/*.top_left_btn>img{display:block;}*/
+	.top_right_btn{position:absolute; bottom:16px; right:0; cursor:pointer;}
+		/*.top_right_btn>img{display:block;}*/
+
+	.top_logo_bx{width:271px; margin:0 auto; margin-top:0;}
+		.top_logo_pic{width:100%;}
+		.top_logo_pic>img{display:block;}
+		
+	.top_right_bx{width:435px; float:right; position:relative; height:109px;}
+		.top_r_pic{ float:right; position:absolute; top:0; right:0;}
+			.top_r_pic>img{display:block;}
+			.top_r_txbx{position:absolute;bottom:16px; left:11px;}
+			.top_tx{font-size:11px;  color:#666666; padding:0 2px; line-height: 15px;}
+			.top_tx>a{font-size:11px; color:#666666;}
+			.top_sns{vertical-align: middle;vertical-align:-webkit-baseline-middle;}
+			/*.top_tx:nth-of-type(1),.top_tx:nth-of-type(2){border-right:1px solid #d9d9d9;}*/
+			.top_tx_bar{color:#d9d9d9;}
+			.top_plus_btn{display:inline-block; margin-right:4px;}
+
+.top_r_txbx_sns{position:absolute;left:200px; bottom:12px;}
+/*----------메뉴 영역----------*/
+.m_bx_wrap{width:100%; margin:0 auto; overflow:hidden; /*margin-bottom:25px;*/ min-width:1280px; position:relative;}
+	.m_menu_bx{width:1280px; margin:0 auto;}
+	.m_menu_bx>span{display:inline-block; padding:15px 47px;}
+	.m_menu_bx>span>a{display:inline-block;}
+	.m_menu_bx>span>a>img{display:inline-block;}
+	
+	.m_rolling_bx{width:100%; margin:0 auto; overflow:hidden; position:relative;}
+		.m_rolling_outbx{width:100%; margin:0 auto; position:absolute; top:37%;}
+		.m_rolling_inbx{width:1280px; margin:0 auto;}
+		.m_prev{float:left; cursor:pointer;}
+			.m_prev>img{display:inline-block;}
+		.m_next{float:right; cursor:pointer;}
+			.m_next>img{display:inline-block;}
+		.m_pic_bx{width:100%;}
+		.m_pic_bx>img{display:inline-block; width:100%;}
+/*@media (min-width:1920px) {
+	.m_prev{left:16%;}
+	.m_next{right:16%;}
+	}
+@media (min-width:1800px) and (max-width:1920px) {
+	.m_prev{left:14%;}
+	.m_next{right:14%;}
+	}	
+@media (min-width:1600px) and (max-width:1800px) {
+	.m_prev{left:11%;}
+	.m_next{right:11%;}
+	}	*/
+/*----------상담 온라인 문의 영역 ----------*/
+.ask_outbx{width:100%; margin:0 auto; overflow:hidden; position:absolute; bottom:13px;}
+.ask_wrap{width:1280px; margin:0 auto; background-image:url(../images/ask_bar.png); background-repeat:round; overflow:hidden;}
+	.ask_bx1,.ask_bx2,.ask_bx3,.ask_bx4,.ask_bx5,.ask_bx6{float:left;  }
+	.ask_bx1{margin-top:15px; margin-bottom:10px;}
+	.ask_bx2,.ask_bx3,.ask_bx4,.ask_bx5{margin-top:18px; margin-bottom:8px;}
+	.ask_bx1{width:103px; margin-left:20px; margin-right:15px;}
+		.ask_bx1>img{display:inline-block;}
+	.ask_bx2{width:233px; margin-right:23px;}
+		.ask_sex_box{ background-color:#f3f3f4; color:#4d4d4d; border:0; height:27px; width:70px; padding-bottom:3px;}
+		.ask_name_input{background-color:#f3f3f4; color:#4d4d4d; border:0; height:21px; padding:3px 5px; width:143px; margin-top:-20px;}
+	.ask_bx3{width:274px; margin-right:18px;}
+		.ask_phone_s{ background-color:#f3f3f4; color:#4d4d4d; border:0; height:27px; width:66px; }
+		.ask_phone_input{background-color:#f3f3f4; color:#4d4d4d; border:0; height:21px; padding:3px 5px; width:70px;}
+		.ask_bx3>span{color:#8a8b8c;}
+			.ask_line01,.ask_line02{margin-left:-5px; margin-right:-5px;}
+			
+	.ask_bx4{width:195px; margin-right:25px;}
+		.ask_coun_box{width:193px; background-color:#f3f3f4; color:#4d4d4d; border:0; height:27px; padding-bottom:3px;}
+	.ask_bx5{width:197px; margin-right:25px;}
+		.ask_date{width:158px;  background-color:#f3f3f4; display:inline-block; float:left; height:13px; padding:7px 0 7px 6px; margin-right:2px; color:#333333;font-size:12px;}
+		.ask_bx5>img{display:inline-block;}
+	.ask_bx6{width:140px;margin:13px 0 0 0;}
+		.ask_bx6>img{display:inline-block;}
+/*----------베스트영역 ----------*/
+.wed_wrap_01{width:100%; margin:0 auto;}
+	.best_wed{margin-top:25px;}
+	.best_wed, .w_hall_best{width:1280px; margin:0 auto; overflow:hidden;background-image:url(../images/title_bar.jpg); background-repeat:repeat-x; margin-bottom:55px;}
+		.best_of_best, .w_hall_title,.hM_titlebx{float:left; text-indent:53px;}
+		.best_left_bx{width:675px; float:left; position:relative; clear:both; margin-top:28px;}
+			.best_left_pic{width:100%;}
+			.best_left_pic>img{display:inline-block;}
+			
+			.best_left_in_con{position:absolute; top:17px; right:22px;}
+			.best_left_in_con>p{margin-bottom:5px; cursor:pointer;}
+			
+			.best_left_in_con>p>img{display:block;}
+			.best_right_bx{width:587px; float:right; margin-top:28px;}
+				.best_right_pic{width:100%;}
+				.best_right_pic>img{display:inline-block;}
+		
+/*----------웨딩홀베스트----------*/
+	.w_hall_best{position:relative;}
+		.w_hall_title{ cursor:pointer;}
+		.w_hall_txbx{float:right; width:380px; margin-right:55px; background-color:#fff; position:absolute; top:4px; right:0;}
+		.w_hall_txbx>span{font-size:15px; color:#666666; padding:0 12px; cursor:pointer;}
+		.w_hall_txbx>span:nth-of-type(1),.w_hall_txbx>span:nth-of-type(2),.w_hall_txbx>span:nth-of-type(3),.w_hall_txbx>span:nth-of-type(4){border-right:1px solid #d9d9d9;}
+
+/*----------홀 리스트 ----------*/
+	.w_hall_inbx{width:100%; clear:both;}
+		.w_h_in_onebx{width:245px; float:left; overflow:hidden; position:relative; margin-top:25px; margin-right:12px;}
+		.w_h_in_onebx:last-child{margin-right:0;}
+		.w_h_round{position:absolute; top:0; left:0;}
+			.w_h_round>a>img{display:block;width:100%;}
+		.w_h_pic{width:100%; height:222px;}
+			.w_h_pic>img{display:block;width:100%;}
+		.w_one_textbx{width:99%; border-right:1px solid #e4e4e4;}
+			.w_h_tx1,.w_h_tx2,.w_h_tx3{display:block; width:100%; text-align:center;}
+			.w_h_tx1{color:#7c71cd; font-size:16px; font-weight:800; margin:10px 0 7px 0;}
+				.w_h_tx1>a{color:#7c71cd; font-size:16px; font-weight:800; margin:10px 0 7px 0;}
+			
+			.w_h_tx2{color:#666666; font-size:15px; margin-bottom:5px;} 
+			.w_h_tx3{color:#666666;font-size:15px;}
+/*----------겔러리 ----------*/
+.gal_in_wrap{width:1280px; margin:0 auto; overflow:hidden; background-image:url(../images/title_bar02.png); background-repeat:repeat-x; margin-bottom:35px;}
+.gal_wrap_01{width:100%; margin:0 auto; padding-top:40px; background-image:url(../images/gal_back.png); background-repeat:no-repeat; min-width:1280px;}
+	.gal_in_wrap{position:relative;}
+		.gal_title_bx{cursor:pointer; /*background-color:#f4f3f2;*/ float:left; text-indent:53px;}
+		.gal_menu_txbx{float:right; width:278px;padding-left:4px; margin-right:55px; background-color:#f4f3f2; position:absolute; top:4px; right:0;}
+		.gal_menu_txbx>span{font-size:15px; color:#666666; padding:0 12px; cursor:pointer;}
+		.gal_menu_txbx>span:nth-of-type(1){border-right:1px solid #d9d9d9;}
+		.gal_menu_txbx>span:nth-of-type(2){border-right:1px solid #d9d9d9;}
+
+		.gal_list_wrap{width:1280px; margin:0 auto; overflow:hidden;}
+			.gal_list_onebx{width:302px; float:left; margin-right:22px; margin-bottom:18px;}
+				.gal_list_onebx:nth-of-type(4),.gal_list_onebx:nth-of-type(8){margin-right:0;}
+			.gal_list_topbx{width:300px; border:1px solid #e4e4e4;}
+				
+				.gal_list_picbx{width:300px; height:197px; text-align:center;border-bottom:1px solid #e4e4e4;}
+					.gal_list_picbx>a>img{display:block; text-align:center;}
+				.gal_list_logobx{/*width:300px; height:60px;*/ text-align:center; line-height:60px; background:#fff;}
+				.gal_list_logobx>img{display:inline-block; vertical-align:middle; }
+				
+				.gal_list_txbx{width:100%;}
+					.gal_list_textname{display:inline-block; float:left; margin:12px 0 12px 10px; color:#5a5f72; font-size:15px;}
+					.gal_list_plus{float:right; margin:12px 10px 12px 0;}
+					.gal_list_plus>a>img{display:inline-block;}
+				
+	.hM_wrap_01{width:100%; margin:0 auto; padding-top:55px;}
+	.hM_inbx{position:relative; width:1280px; margin:0 auto; overflow:hidden; background-image:url(../images/title_bar.jpg); background-repeat:repeat-x; margin-bottom:30px;}
+		.hM_titlebx{}
+		.hM_titlebx>img{display:inline-block;}
+		.hM_menu_bx{float:right; width:608px; margin-right:55px; background-color:#ffffff; position:absolute; top:4px; right:0; padding-left:3px;}
+		.hM_menu_bx>span{font-size:15px; color:#666666; padding:0 12px; cursor:pointer;}
+			.hM_menu_bx>span:nth-of-type(1),.hM_menu_bx>span:nth-of-type(2),.hM_menu_bx>span:nth-of-type(3),.hM_menu_bx>span:nth-of-type(4),.hM_menu_bx>span:nth-of-type(5),.hM_menu_bx>span:nth-of-type(6),.hM_menu_bx>span:nth-of-type(7),.hM_menu_bx>span:nth-of-type(8){border-right:1px solid #d9d9d9;}
+
+		.hM_picbx{width:1280px; margin:0 auto; overflow:hidden; margin-bottom:20px;}
+			.hM_picbx>p{float:left;}
+			.hM_picbx>p:nth-of-type(1),.hM_picbx>p:nth-of-type(2){margin-right:13px;}
+			.hM_picbx>p:nth-of-type(1),.hM_picbx>p:nth-of-type(2),.hM_picbx>p:nth-of-type(3),.hM_picbx>p:nth-of-type(4),.hM_picbx>p:nth-of-type(5){margin-bottom:13px;}
+			.hM_picbx>p:nth-of-type(4){margin-right:12px;}
+			.hM_picbx>p>a{}
+			.hM_picbx>p>a>img{display:inline-block; cursor:pointer;}
+	.bottom_logo_wrap{width:1280px; margin:0 auto; margin-bottom:20px; overflow:hidden;}
+		.bottom_logo_wrap>p{display:inline-block; float:left; margin-right:19px;}
+		.bottom_logo_wrap>p:last-child{margin-right:0; margin-left:10px;}
+
+	.footer_wrap01{width:100%; min-width:1280px; overflow:hidden; background-color:#dcdcdc; margin-top:20px;}
+		.f_text_wrap{width:1280px; margin:0 auto; padding:17px 0;} 
+		.f_text_wrap>span{font-size:15px; color:#4c4c4c; margin:0 16px 0 10px;}
+
+	.footer_wrap02{width:100%; min-width:1280px; overflow:hidden; background-color:#f6f6f6;}
+		.copyright{width:1280px; margin:0 auto; margin-top:30px; margin-bottom:30px;}
+			.copy_logo_wrap{width:170px; float:left; margin-right:40px;}
+			.copy_logo_wrap>img{display:inline-block; margin-left:16px;}
+			.copy_text_wrap{}
+			.copy_text_wrap>span{display:block; text-align:left; font-size:12px; color:#4c4c4c; font-weight:bold;}
+				.copy_tx_01{padding:3px 0 4px 0;}
+				.copy_tx_02{padding:4px 0 3px 0;}
+
+/*-----------퀵메뉴----------*/
+.q_wrap{width:111px; margin:0 auto; position:fixed; top:250px; left:1614px; z-index:6;}
+	.q_bx_01{width:111px; margin-bottom:4px;}
+		.q_bx_01>p{display:block;}
+			.q_bx_01>p>img{display:block;}
+		.q_bx_02{width:111px; margin-bottom:4px;}
+			.q_bx_02>p{display:block;}
+			.q_bx_02>p>img{display:block;}
+		/*.q_bx_03{width:105px; margin:0 auto;background-color:#e9e9e9; position:relative;}
+			.q_bx_03>p{display:block; margin-bottom:10px;}
+			.q_bx_03>p>img{display:block;}*/
+		
+		.q_bx_03{width:110px; margin:0 auto;background-color:#ececec; position:relative;}
+			.q_bx_03>p{display:block; margin-bottom:10px;}
+			.q_bx_03>p>img{display:block;}
+
+
+		.q_Ask_bx{width:87px; margin:0 auto; padding-bottom:12px; }
+			.q_Ask_name, .q_Ask_phone, .q_Ask_say{font-size:12px; color:#747474;margin-bottom:5px; display:block;}
+			.q_Ask_name_input, .q_Ask_phone_input, .q_Ask_say_tx{border:0; width:83px; height:14px; padding:3px; margin-bottom:10px;}
+			.q_Ask_name{}
+			.q_Ask_name_input{}
+			.q_Ask_phone{}
+			.q_Ask_phone_input{}
+			.q_Ask_say{}
+			.q_Ask_say_tx{overflow:hidden;}
+			.q_Ask_coun{display:block;}
+		.q_Ask_btnbx{position:absolute; bottom:-38px; width:105px; text-align:center; }
+
+/*-----------footer----------*/
+footer{width:100%; clear:both;  margin-top:25px;}
+	#footer_wrap{width:100%; background:#e6e6e6; min-width:1235px; padding-top:15px;}
+	#bottombg{width:1200px; margin:0 auto; position:relative;}
+	#footer_wrap{clear:both;}
+	p.copyLogo{width:153px; position:absolute; right:40px; bottom:21px; float:right;}
+
+#footer_wrap2{background: #2e2e2e; padding: 35px 0; clear:both; z-index:4;}
+.ft_wrap, .copy_wrap{width: 1280px; margin: 0 auto;}
+.ft_link{width:602px;}
+.ft_link ul{width:140px; float: left;}
+.ft_link li a{display: block; color: #a5a5a5; padding-bottom: 10px; font-size: 13px;}
+.ft_link li a:hover{text-decoration: underline;}
+
+.ft_link, .ft_tel{float: left;}
+	.ft_tel{width:158px; padding-left:10px;}
+	.ft_tel_title,.ft_tel_ttx01,.ft_tel_TMbx_ttx{display:block; color:#fff;}
+	.ft_tel_title{width:100%; font-size:16px; margin-bottom:10px;}
+	.ft_tel_TTXbx{width:100%; margin-bottom:5px;}
+		.ft_tel_ttx01{width:100%; font-size:22px; font-weight:500;}
+	.ft_tel_TMbx{width:100%; text-align:center;}
+		.ft_tel_TMbx_ttx{font-size:14px;}
+	
+.ft_map{float: right;}
+
+#copyright2{background:#272727; padding:24px 0;}
+#copyright2 .copy_logo{float: left; margin-right: 35px; display:inline-block;}
+#copyright2 .copy_txt{float: left; color: #a5a5a5; font-size: 13px; line-height: 19px; display:inline-block;padding-top: 10px;}
+
+/*------링크메뉴------*/
+div#footer_link{width:545px; float:left; border-right:1px solid #FFF; margin-bottom:30px; } 
+	div.footer_link_list01,div.footer_link_list02,div.footer_link_list03,div.footer_link_list04{width:130px; float:left; margin-top:20px;}
+	div.footer_link_list01>p,div.footer_link_list02>p,div.footer_link_list03>p,div.footer_link_list04>p{text-align:center; padding-bottom:14px;}
+
+/*------웨딩홀찾아보기 & 고객상담------*/
+div#footer_hallSerch{width:600px; float:left;}
+	div.hallSerch01{padding:0 25px; border-right:1px solid #FFF;}
+	div.hallSerch01{width:250px; float:left; padding-bottom:29px;  margin-bottom:30px;}
+	div.hallSerch02{margin-left:40px; width:200px; float:left; margin-top:10px;}
+	p.hallSerch{margin:14px 30px 0; text-align:center;}
+	#hall_name_footer{position:relative; margin-top:50px; margin-left:-20px;}
+/*------폼 서치박스------*/
+	div.hallSerch01{height: 120px; position:relative;}
+	div.hallSerch01>form input#footer_userSerch{width:215px; height:25px; line-height:25px; position:absolute; left:35px; bottom:1px; 
+									background:#FFF; border:2px solid #cecece; font-size:12px;}
+						p.hallSerch_btn{position:absolute; right:25px; bottom:8px;}			
+	p.callNum{}
+	
+	div#footer_Copy{width:100%;}
+	div#footer_Copy>p{display:inline-block; font-size:11px;margin-bottom:35px; margin-right:15px;}
+	p.copyRight01
+	
+	
+/*-----201705신규------*/
+.cf{}
+.cf:after{display:block; clear:both; content:""}
+#main_wrap{position:relative; z-index:1;}
+.section_wrap{position:relative; padding:50px 0 0 0;}
+.section_con{width:1280px; margin:0 auto;}
+.section01{background:url(../images/main/section01_bg.jpg) repeat-x; padding-bottom:40px;}
+.section01 h1{text-align:center; padding-bottom:40px}
+.section01 a{display:block}
+.section01 a.box{width:312px; float:left; margin-right:10px}
+.section01 a:last-child{margin-right:0}
+
+.section02{padding:50px 0;}
+.section02 .hall_head{border:1px solid #ededed; width:244px; padding-top:40px; text-align:center; margin-right:19px; float:left}
+.section02 .hall_head a.btn_hall{display:block; width:190px; color:#fff; background:#9f7c60; line-height:30px; font-size:13px; margin:10px auto}
+.section02 .hall_head .search_hall{border-top:1px solid #ededed; margin-top:36px}
+.section02 .hall_head .search_hall #hall_name_footer{margin:0;}
+.section02 .hall_head label.s_hall{display:block; width:205px;background:#ececec; margin:20px auto}
+.section02 .hall_head input[type="text"]{border:0; background:none; padding:10px; width:154px}
+.section02 .hall_box{width:238px; margin-right:18px; border:1px solid #ededed; cursor:pointer; float:left}
+.section02 .hall_box:last-child{margin-right:0}
+.section02 .hall_box .hall_thumb{}
+.section02 .hall_box .hall_txt{padding:10px; display:block}
+.section02 .hall_box dt{font-size:15px; font-weight:600; color:#333; padding-bottom:10px}
+.section02 .hall_box dd{font-size:13px; color:#707070}
+.section02 .hall_box .ellipsis-multi {overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; word-wrap:break-word;  line-height: 15px; height: 45px; }
+.section02 .w_h_in_onebx{margin-top: 0; width: 238px; margin-right:18px; border: 1px solid #ededed}
+.section02 .w_h_in_onebx .w_h_pic img{width:238px; height: 216px}
+.section02 .w_h_in_onebx:last-child{margin-right:0}
+.section02 .w_h_in_onebx .w_h_tx1>a{color:#333; font-size:15px; font-weight: 600}
+.section02 .w_one_textbx{height:78px; border:0}
+
+.section03{background:url(../images/main/section03_bg.jpg) no-repeat}
+.section03 a.section_con, .section04 a.section_con, .section05 a.section_con{position:relative; display: block; height: 642px}
+.section03 h1{position: absolute; top: 228px; right: 133px; display: block}
+.section04 h1, .section05 h1{position: absolute; top: 170px; left:130px; display: block}
+.section03 .con_img{position: absolute; left: 0; top: 35px;}
+.section04 .con_img, .section05 .con_img{position: absolute; right:0; top: 35px}
+.section04{background:url(../images/main/section04_bg.jpg) no-repeat}
+.section05{background:url(../images/main/section05_bg.jpg) no-repeat}
+
+
+.section06{}
+.section06 h1{text-align:center; padding-bottom:40px}
+.section06 a{display:block; /*padding-bottom:40px;*/}
+.section06 a.box{width:229px; float:left; margin-right:33px}
+.section06 a:last-child{margin-right:0}
+
+@media (min-width:1430px){
+	.main_title_menu span{width:140px; margin:0 8px;}
+	.m_allmenu span, .m_weddinghall span, .m_sdm span, .m_honsu span, .m_honey span, .m_after span{font-size:15px; margin:0 15px;}
+	}
+	@media screen and (-webkit-min-device-pixel-ratio:0) { .m_allmenu span, .m_weddinghall span, .m_sdm span, .m_honsu span, .m_honey span, .m_after span{margin:0 12.3px;}
+	}
