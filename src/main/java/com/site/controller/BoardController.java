@@ -41,4 +41,14 @@ public class BoardController {
 		return "/reservation/reservation";
 	}
 	
+	@RequestMapping("/reservation/bidding_list")
+	public String bidding_list() {
+		return "/reservation/bidding_list";
+	}
+	
+	@RequestMapping("/reservation/bidding_write")
+	public String bidding_write() {
+		return "/reservation/bidding_write";
+	}
+	
 }// class
