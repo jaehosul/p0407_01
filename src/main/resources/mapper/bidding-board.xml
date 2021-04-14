@@ -103,10 +103,6 @@
   </select>
 	
 	
-	
-	
-	
-
 	<!-- insert -->
 	<insert id="insertBiddingWrite">
        <![CDATA[
@@ -120,4 +116,24 @@
     <delete id="biddingDelete" >
         delete bidding_board where bidding_id=#{bidding_id}
     </delete>
+    
+      <!-- reply -->
+  <insert id="biddingReply">
+       <![CDATA[
+       
+        insert into bidding_board values(
+		bidding_seq.nextval,#{bidding_title},#{bidding_name},
+		#{bidding_content},
+		sysdate,0,#{bgroup},#{bstep}+1,#{bindent}+1,0)
+       
+	   ]]>
+  </insert>
+  <!-- replyPlus -->
+  <update id="biddingReplyPlus">
+       <![CDATA[
+        update bidding_board set bidding_step=bidding_Step+1
+        where bidding_group=#{bidding_group} and bidding_Step>#{bidding_step}
+	   ]]>
+  </update>
+    
 </mapper>

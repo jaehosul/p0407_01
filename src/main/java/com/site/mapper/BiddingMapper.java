@@ -32,6 +32,11 @@ public interface BiddingMapper {
 
 	// 삭제합니다.
 	void biddingDelete(String bidding_id);
+	
+	// 리플
+	// Reply
+	void biddingReply(BiddingDto biddingDto);
+	void biddingReplyPlus(BiddingDto biddingDto);
 
 
 }

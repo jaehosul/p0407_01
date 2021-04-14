@@ -62,12 +62,9 @@ public class BiddingServiceImpl implements BiddingService {
 	@Override
 	public Map<String, Object> content_view(String bidding_id, String page, String search) {
 		Map<String, Object> map = new HashMap<String, Object>();
+		
 		biddingDto = biddingMapper.content_view(bidding_id);		
-		map.put("biddingDto", biddingDto);
-		map.put("upperDto", upperDto);
-		map.put("lowerDto", lowerDto);
-		map.put("search", search);
-		map.put("page", page);
+		
 		
 		
 		//조회수 1 증가
@@ -85,6 +82,13 @@ public class BiddingServiceImpl implements BiddingService {
 			upperDto = biddingMapper.selectBidding_upperSearch(bidding_id,search);
 			lowerDto = biddingMapper.selectBidding_lowerSearch(bidding_id,search);
 		}
+		
+		map.put("biddingDto", biddingDto);
+		map.put("upperDto", upperDto);
+		map.put("lowerDto", lowerDto);
+		map.put("search", search);
+		map.put("page", page);
+		
 		return map;
 	}
 
@@ -106,9 +110,7 @@ public class BiddingServiceImpl implements BiddingService {
 	@Override
 	public Map<String, Object> modify_view(String bidding_id, String page, String search) {
 		//content 1개 가져오기
-		biddingDto = biddingMapper.content_view(bidding_id);
-		System.out.println("서비스 임플리먼트 bidding_id"+bidding_id);
-		System.out.println("서비스 임플리먼트 dto"+biddingDto);
+		BiddingDto biddingDto = biddingMapper.content_view(bidding_id);
 		
 		map.put("biddingDto", biddingDto);
 		map.put("search", search);
@@ -117,17 +119,27 @@ public class BiddingServiceImpl implements BiddingService {
 		return map;
 	}
 
-
-
-//	@RequestMapping("/board/reply_view")
-//	public String reply_view(@RequestParam @Nullable String page,
-//			@RequestParam @Nullable String category,
-//			@RequestParam @Nullable String search,
-//			@RequestParam @Nullable String bid, Model model) {
-//		map = boardService.boardModify_view(bid,page,category,search);
-//		model.addAttribute("map",map);
-//		return "board/reply_view";
-//	}
+	// 리플
+	// Reply
+	@Override
+	public Map<String, Object> reply_view(String bidding_id, String page, String search) {
+		//content 1개 가져오기
+		biddingDto = biddingMapper.content_view(bidding_id);
+		System.out.println("reply 임플리먼트: "+bidding_id);
+		map.put("biddingDto", biddingDto);
+		map.put("search", search);
+		map.put("page", page);
+		return map;
+	}
 	
+	@Override
+	public void biddingReply(BiddingDto biddingDto) {
+	    // mapper전달
+	    biddingMapper.biddingReply(biddingDto);
+	    biddingMapper.biddingReplyPlus(biddingDto);
+	    return;
+		
+	}
+
 	
 }// class

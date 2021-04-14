@@ -106,7 +106,7 @@ public class BoardController {
 		System.out.println("bidding_id: "+bidding_id);
 		map = biddingService.content_view(bidding_id, page, search);
 		model.addAttribute("map",map);
-		return "hall/content_view";
+		return "/hall/content_view";
 	}
 	
 	@RequestMapping("/hall/delete")
@@ -123,11 +123,22 @@ public class BoardController {
 			@RequestParam @Nullable String bidding_id, 
 			@RequestParam @Nullable String search, 
 			Model model) {
+		System.out.println("con : "+bidding_id);
 		map = biddingService.modify_view(bidding_id,page, search);
 		model.addAttribute("map",map);
 		return "hall/modify_view";
 	}
 	
+	// 리플
+	// Reply
+	@RequestMapping("/hall/reply_view")
+	public String reply_view(@RequestParam @Nullable String page,
+			@RequestParam @Nullable String search,
+			@RequestParam @Nullable String bidding_id, Model model) {
+		map = biddingService.reply_view(bidding_id,page,search);
+		model.addAttribute("map",map);
+		return "hall/reply_view";
+	}
 	
 	
 }// class

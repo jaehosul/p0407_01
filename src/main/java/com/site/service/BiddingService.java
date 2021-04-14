@@ -17,6 +17,10 @@ public interface BiddingService {
 
 	Map<String, Object> content_view(String bidding_id, String page, String search);
 
+	Map<String, Object> reply_view(String bidding_id, String page, String search);
+
+	void biddingReply(BiddingDto biddingDto);
+
 
 
 }
