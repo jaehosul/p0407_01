@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.site.mapper.BiddingMapper">
+
+	<!-- list 전체리스트 -->
+	<select id="selectBiddingList"
+		resultType="com.site.dto.BiddingDto">
+      <![CDATA[
+        select * from  (select rownum rnum, a.* from
+		(select * from bidding_board order by bidding_group desc, bidding_step asc) a) 
+		where rnum>=#{startrow} and rnum<=#{endrow}
+	  ]]>
+	</select>
+
+	<!-- 전체리스트 개수 -->
+	<select id="listCount" resultType="int">
+		select count(*) from bidding_board
+	</select>
+
+	<!-- content_view -->
+	<select id="content_view" resultType="com.site.dto.BiddingDto">
+		select * from bidding_board where bidding_id=#{bidding_id}
+	</select>
+	
+	
+	
+	<!-- 조회수 1 증가 -->
+	<update id="selectUpHit" >
+        update bidding_board set bidding_hit=bidding_hit+1 where bidding_id=#{bidding_id}
+	</update>
+	
+	
+	
+	<!-- search 검색하여 list 받기 -->
+	  <select id="selectBiddingListSearch" resultType="com.site.dto.BiddingDto">
+      <![CDATA[
+        select * from (select rownum rnum, a.* from
+		(select * from bidding_board where bidding_title like '%'||#{search}||'%'
+		order by bidding_group desc, bidding_step asc) a)
+		where rnum>=#{startrow} and rnum<=#{endrow}
+	  ]]>
+  </select>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- 윗글 데이터 -->
+    <select id="selectBidding_upper" resultType="com.site.dto.BiddingDto">
+	    <![CDATA[
+	      select * from (select rownum rnum, a.* from
+		  (select * from bidding_board order by bidding_group desc, bidding_step asc) a)
+		  where rnum=
+		  (select rnum from (select rownum rnum, a.* from
+		  (select * from bidding_board order by bidding_group desc, bidding_step asc) a) 
+		  where bidding_id=#{bidding_id})-1
+		]]>
+    </select>
+    <!-- 아랫글 데이터 -->
+    <select id="selectBidding_lower" resultType="com.site.dto.BiddingDto">
+	    <![CDATA[
+	      select * from (select rownum rnum, a.* from
+		  (select * from bidding_board order by bidding_group desc, bidding_step asc) a)
+		  where rnum=
+		  (select rnum from (select rownum rnum, a.* from
+		  (select * from bidding_board order by bidding_group desc, bidding_step asc) a) 
+		  where bidding_id=#{bidding_id})+1
+		]]>
+    </select>
+  	<!-- 윗글 데이터 - search검색 -->
+    <select id="selectBidding_upperSearch" resultType="com.site.dto.BiddingDto">
+        <![CDATA[
+          select * from (select rownum rnum, a.* from
+	   	  (select * from bidding_board where bidding_title like '%'#{search}'%'
+		  order by bidding_group desc, bidding_step asc) a)
+		  where rnum=
+		  (select rnum from (select rownum rnum, a.* from
+		  (select * from bidding_board where bidding_title like '%'#{search}'%'
+		  order by bidding_group desc, bidding_step asc) a)
+		  where bidding_id=#{bidding_id})-1
+	    ]]>
+  </select>	
+	<!-- 아랫글 데이터 - search검색 -->
+    <select id="selectBidding_lowerSearch" resultType="com.site.dto.BiddingDto">
+        <![CDATA[
+          select * from (select rownum rnum, a.* from
+		  (select * from bidding_board where bidding_title like '%'||#{search}||'%'
+		  order by bidding_group desc, bidding_step asc) a)
+		  where rnum=
+		  (select rnum from (select rownum rnum, a.* from
+		  (select * from bidding_board where bidding_title like '%'||#{search}||'%' 
+		  order by bidding_group desc, bidding_step asc) a)
+		  where bidding_id=#{bidding_id})+1
+	    ]]>
+  </select>
+	
+	
+	
+	
+	
+
+	<!-- insert -->
+	<insert id="insertBiddingWrite">
+       <![CDATA[
+		insert into bidding_board values(
+		bidding_seq.nextval,#{bidding_title},#{bidding_name},
+		#{bidding_content},sysdate,0,bidding_seq.currval,0,0,0)
+	   ]]>
+	</insert>
+	
+	<!-- delete -->
+    <delete id="biddingDelete" >
+        delete bidding_board where bidding_id=#{bidding_id}
+    </delete>
+</mapper>
