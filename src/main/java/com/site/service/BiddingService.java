@@ -9,7 +9,7 @@ public interface BiddingService {
 
 	void biddingWrite(BiddingDto biddingDto);
 
-	Map<String, Object> biddingListAll(String listPage, String search);
+	Map<String, Object> biddingListAll(String page, String search);
 
 	Map<String, Object> modify_view(String bidding_id, String page, String search);
 
@@ -17,9 +17,14 @@ public interface BiddingService {
 
 	Map<String, Object> content_view(String bidding_id, String page, String search);
 
-	Map<String, Object> reply_view(String bidding_id, String page, String search);
-
+	// 리플
+	// reply
 	void biddingReply(BiddingDto biddingDto);
+
+	// 수정
+	// Modify
+	void biddingModify(BiddingDto biddingDto);
+
 
 
 

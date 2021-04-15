@@ -11,6 +11,7 @@
 	rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/write.css">
+
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script>
        function writeCheck(){
@@ -35,7 +36,9 @@
        }
     
     </script>
+
 </head>
+
 <body>
 	<!-- header -->
 	<jsp:include page="../include/header.jsp">
@@ -44,38 +47,43 @@
 
 
 	<div id="contain02_text">
-		<span class="title_name">입찰 신청 페이지</span> <span class="title_detail">조건을
-			기입하여 주세요.</span>
+		<span class="title_name">입찰 신청 페이지 수정</span> <span class="title_detail">수정할 내용을 입력하세요.</span>
 	</div>
 
 	<section>
 		<hr>
 
-		<form action="./write" id="writeForm" name="writeForm" method="post"
-			enctype="multipart/form-data">
+		<form action="/hall/modify" id="writeForm" name="writeForm" method="post">
+		<!-- <form action="/hall/modify" name="modify" method="post"> -->
 			<table>
+			
+			    <input type="hidden" name="page" value="${map.page }">
+      			<input type="hidden" name="bidding_id" value="${map.biddingDto.bidding_id }">
+      			<input type="hidden" name="search" value="${map.search}">
+			
 				<colgroup>
 					<col width="15%">
 					<col width="85%">
 				</colgroup>
 				<tr>
 					<th>작성자</th>
-					<td><input type="text" name="bidding_name" id="bidding_name"></td>
+					<td><input type="text" name="bidding_name" id="bidding_name" value="${map.biddingDto.bidding_name }" readonly></td>
 				</tr>
 				<tr>
 					<th>제목</th>
-					<td><input type="text" name="bidding_title" id="bidding_title"></td>
+					<td><input type="text" name="bidding_title" id="bidding_title" value="${map.biddingDto.bidding_title }"></td>
 				</tr>
 				<tr>
 					<th>내용</th>
-					<td><textarea name="bidding_content" id="bidding_content" cols="50"
-							rows="10"></textarea></td>
+					<td><textarea name="bidding_content" id="bidding_content" cols="50" rows="10">${map.biddingDto.bidding_content }</textarea></td>
 				</tr>
 			</table>
+			<hr>
 			<div class="button-wrapper">
-				<button type="button" onclick="writeCheck()" class="write">작성완료</button>
-				<button type="button" class="cancel"
-					onclick="javascript:location.href='./hall_bidding_list'">취소</button>
+				<button type="button" class="write" onclick="writeCheck()">작성완료</button>
+				<button type="button" class="cancel" onclick="javascript:location.href='./hall_bidding_list'">취소</button>
+				<!-- <button type="submit" class="write">수정완료</button>
+        		<button type="button" class="cancel" onclick="javascript:location.href='./hall_bidding_list'">취소</button> -->
 			</div>
 		</form>
 

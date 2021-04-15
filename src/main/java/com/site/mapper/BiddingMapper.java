@@ -10,9 +10,12 @@ import com.site.dto.BiddingDto;
 public interface BiddingMapper {
 
 	// 입찰 리스트를 DB로부터 가져오기
-	List<BiddingDto> selectBiddingListAll();
+	List<BiddingDto> selectBiddingListAll(int startrow, int endrow);
 	List<BiddingDto> selectBiddingListSearch(int startrow, int endrow, String search);
+	
+	// list 개수 
 	int listCount();
+	int listCountSearch(String search);
 
 	
 	// 입찰 리스트 가운데 하나만 불러옵니다.
@@ -37,6 +40,10 @@ public interface BiddingMapper {
 	// Reply
 	void biddingReply(BiddingDto biddingDto);
 	void biddingReplyPlus(BiddingDto biddingDto);
+	
+	// 수정
+	// Modify
+	void biddingModify(BiddingDto biddingDto);
 
 
 }

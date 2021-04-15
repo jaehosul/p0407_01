@@ -18,5 +18,6 @@ public class BiddingDto {
 	private int bidding_group;
 	private int bidding_step;
 	private int bidding_indent;
+	private int auctioned;
 
 }

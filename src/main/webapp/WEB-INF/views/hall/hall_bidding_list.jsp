@@ -71,9 +71,9 @@
 			<!-- 페이지 번호넣기 -->
 			<a href="../hall/hall_bidding_list?search=${map.search}&page=1">&lt;&lt;</a>
 			<c:choose>
-				<c:when test="${map.page <= 1 }">&lt;&nbsp;</c:when>
+				<c:when test="${map.page <= 1 }">&lt;</c:when>
 				<c:otherwise>
-					<a href="../hall/hall_bidding_list?search=${map.search}&page=${map.page-1}">&lt;&nbsp;</a>
+					<a href="../hall/hall_bidding_list?search=${map.search}&page=${map.page-1}">&lt;</a>
 				</c:otherwise>
 			</c:choose>
 

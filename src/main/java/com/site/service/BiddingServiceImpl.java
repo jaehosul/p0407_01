@@ -28,7 +28,7 @@ public class BiddingServiceImpl implements BiddingService {
 	
 	@Override
 	public Map<String, Object> biddingListAll(String listPage, String search) {
-		Map map = new HashMap<String, Object>();
+//		Map map = new HashMap<String, Object>();
 		list = new ArrayList<BiddingDto>();
 		int page=1;  //첫페이지 초기화
 		int limit=10; //한페이지에 나오는 게시글수 : 10
@@ -49,11 +49,8 @@ public class BiddingServiceImpl implements BiddingService {
 		
 		
 		//페이지 넘버링 메소드
-		map = pageNumber.pageNumber(page, limit);
+		map = pageNumber.pageNumber(page, limit, search);
 		map.put("list", list);
-		
-		int test_page = (int) map.get("page");
-		
 		
 		return map;
 	}
@@ -110,7 +107,10 @@ public class BiddingServiceImpl implements BiddingService {
 	@Override
 	public Map<String, Object> modify_view(String bidding_id, String page, String search) {
 		//content 1개 가져오기
-		BiddingDto biddingDto = biddingMapper.content_view(bidding_id);
+		biddingDto = biddingMapper.content_view(bidding_id);
+		
+		
+		map = new HashMap<String, Object>();
 		
 		map.put("biddingDto", biddingDto);
 		map.put("search", search);
@@ -121,16 +121,6 @@ public class BiddingServiceImpl implements BiddingService {
 
 	// 리플
 	// Reply
-	@Override
-	public Map<String, Object> reply_view(String bidding_id, String page, String search) {
-		//content 1개 가져오기
-		biddingDto = biddingMapper.content_view(bidding_id);
-		System.out.println("reply 임플리먼트: "+bidding_id);
-		map.put("biddingDto", biddingDto);
-		map.put("search", search);
-		map.put("page", page);
-		return map;
-	}
 	
 	@Override
 	public void biddingReply(BiddingDto biddingDto) {
@@ -139,6 +129,13 @@ public class BiddingServiceImpl implements BiddingService {
 	    biddingMapper.biddingReplyPlus(biddingDto);
 	    return;
 		
+	}
+
+	// 수정, Modify
+	@Override
+	public void biddingModify(BiddingDto biddingDto) {
+		biddingMapper.biddingModify(biddingDto);
+	    return;
 	}
 
 	

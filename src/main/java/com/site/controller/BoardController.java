@@ -75,9 +75,6 @@ public class BoardController {
 	public String hall_bidding_list(@RequestParam @Nullable String page, 
 			@RequestParam @Nullable String search,
 			Model model) {
-		
-		System.out.println("컨트롤러 search:"+search);
-		
 		map = biddingService.biddingListAll(page,search);
 		model.addAttribute("map",map);
 		return "hall/hall_bidding_list";
@@ -102,8 +99,6 @@ public class BoardController {
 			@RequestParam @Nullable String page,
 			@RequestParam @Nullable String search,
 			Model model) {
-		System.out.println("컨트롤러 페이지:"+page);
-		System.out.println("bidding_id: "+bidding_id);
 		map = biddingService.content_view(bidding_id, page, search);
 		model.addAttribute("map",map);
 		return "/hall/content_view";
@@ -118,24 +113,46 @@ public class BoardController {
 	}
 
 	// 수정 페이지 컨트롤러
+	@RequestMapping("/hall/modify")
+	public String modify(BiddingDto biddingDto,
+			@RequestParam @Nullable String page,
+			@RequestParam @Nullable String search,
+			Model model) throws Exception {
+		System.out.println("DTO:"+biddingDto.getBidding_id());
+		biddingService.biddingModify(biddingDto);
+		search = URLEncoder.encode(search,"utf-8");
+		return "redirect:/hall/hall_bidding_list?page="+page+"&search="+search;
+		
+	}
+	
 	@RequestMapping("/hall/modify_view")
 	public String modify_view(@RequestParam @Nullable String page,
 			@RequestParam @Nullable String bidding_id, 
 			@RequestParam @Nullable String search, 
 			Model model) {
-		System.out.println("con : "+bidding_id);
-		map = biddingService.modify_view(bidding_id,page, search);
+		map = biddingService.modify_view(bidding_id,page,search);
 		model.addAttribute("map",map);
 		return "hall/modify_view";
 	}
 	
 	// 리플
 	// Reply
+	@RequestMapping("/hall/reply")
+	public String reply(BiddingDto biddingDto,
+			@RequestParam @Nullable String page,
+			@RequestParam @Nullable String search,
+			Model model) throws Exception {
+		
+		biddingService.biddingReply(biddingDto);
+		search = URLEncoder.encode(search,"utf-8");
+		return "redirect:/hall/hall_bidding_list?page="+page+"&search="+search;
+	}
+	
 	@RequestMapping("/hall/reply_view")
 	public String reply_view(@RequestParam @Nullable String page,
 			@RequestParam @Nullable String search,
 			@RequestParam @Nullable String bidding_id, Model model) {
-		map = biddingService.reply_view(bidding_id,page,search);
+		map = biddingService.modify_view(bidding_id,page,search);
 		model.addAttribute("map",map);
 		return "hall/reply_view";
 	}

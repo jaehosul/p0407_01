@@ -14,12 +14,17 @@ public class PageNumber {
 	BiddingMapper biddingMapper;
 	
 	// 하단 넘버링 정보메소드
-	public Map<String,Object> pageNumber(int page,int limit) {
+	public Map<String,Object> pageNumber(int page,int limit,String search) {
 		Map map = new HashMap<String, Object>();
 		int listCount=0;
-		listCount = biddingMapper.listCount();
-		System.out.println("리스트카운트: "+ listCount);
-		System.out.println("페이지넘버 페이지: "+page);
+
+		if(search==null || search.equals("")) {
+			listCount = biddingMapper.listCount();
+		}else {
+			listCount = biddingMapper.listCountSearch(search);
+		}
+		
+		
 		//최대페이지 수
 		int maxpage = (int)((double)listCount/limit+0.95); //34/10+0.95=(int)4.35 -> 4페이지 
 		//첫 페이지 번호 : 10페이지 10/10+0.9=(int)1.9 -> (1-1)*10+1 = 1
@@ -33,6 +38,7 @@ public class PageNumber {
 		map.put("maxpage",maxpage );
 		map.put("startpage",startpage );
 		map.put("endpage",endpage );
+		map.put("search",search );
 		
 		return map;
 	}

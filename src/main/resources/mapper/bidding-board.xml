@@ -19,6 +19,11 @@
 	<select id="listCount" resultType="int">
 		select count(*) from bidding_board
 	</select>
+	<select id="listCountSearch" resultType="int">
+    	<![CDATA[
+    		select count(*) from bidding_board where bidding_title like '%'||#{search}||'%'
+    	]]>
+	</select>
 
 	<!-- content_view -->
 	<select id="content_view" resultType="com.site.dto.BiddingDto">
@@ -32,8 +37,6 @@
         update bidding_board set bidding_hit=bidding_hit+1 where bidding_id=#{bidding_id}
 	</update>
 	
-	
-	
 	<!-- search 검색하여 list 받기 -->
 	  <select id="selectBiddingListSearch" resultType="com.site.dto.BiddingDto">
       <![CDATA[
@@ -43,15 +46,6 @@
 		where rnum>=#{startrow} and rnum<=#{endrow}
 	  ]]>
   </select>
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	<!-- 윗글 데이터 -->
     <select id="selectBidding_upper" resultType="com.site.dto.BiddingDto">
@@ -79,11 +73,11 @@
     <select id="selectBidding_upperSearch" resultType="com.site.dto.BiddingDto">
         <![CDATA[
           select * from (select rownum rnum, a.* from
-	   	  (select * from bidding_board where bidding_title like '%'#{search}'%'
+	   	  (select * from bidding_board where bidding_title like '%'||#{search}||'%'
 		  order by bidding_group desc, bidding_step asc) a)
 		  where rnum=
 		  (select rnum from (select rownum rnum, a.* from
-		  (select * from bidding_board where bidding_title like '%'#{search}'%'
+		  (select * from bidding_board where bidding_title like '%'||#{search}||'%'
 		  order by bidding_group desc, bidding_step asc) a)
 		  where bidding_id=#{bidding_id})-1
 	    ]]>
@@ -102,7 +96,6 @@
 	    ]]>
   </select>
 	
-	
 	<!-- insert -->
 	<insert id="insertBiddingWrite">
        <![CDATA[
@@ -117,23 +110,33 @@
         delete bidding_board where bidding_id=#{bidding_id}
     </delete>
     
-      <!-- reply -->
-  <insert id="biddingReply">
-       <![CDATA[
+    
+    <!-- 수정, Modify -->
+    <!-- update -->
+    <update id="biddingModify">
+      <![CDATA[
+        update bidding_board set 
+        bidding_title=#{bidding_title},bidding_content=#{bidding_content},bidding_date=sysdate
+	    where bidding_id=#{bidding_id}
+	  ]]>
+    </update>
+    
+    <!-- reply -->
+    <insert id="biddingReply">
+      <![CDATA[
        
         insert into bidding_board values(
 		bidding_seq.nextval,#{bidding_title},#{bidding_name},
 		#{bidding_content},
-		sysdate,0,#{bgroup},#{bstep}+1,#{bindent}+1,0)
-       
-	   ]]>
-  </insert>
-  <!-- replyPlus -->
-  <update id="biddingReplyPlus">
-       <![CDATA[
-        update bidding_board set bidding_step=bidding_Step+1
-        where bidding_group=#{bidding_group} and bidding_Step>#{bidding_step}
-	   ]]>
-  </update>
+		sysdate,0,#{bidding_group},#{bidding_step}+1,#{bidding_indent}+1,0)
+	  ]]>
+    </insert>
+    <!-- replyPlus -->
+    <update id="biddingReplyPlus">
+      <![CDATA[
+        update bidding_board set bidding_step=bidding_step+1
+        where bidding_group=#{bidding_group} and bidding_step>#{bidding_step}
+	  ]]>
+    </update>
     
 </mapper>
