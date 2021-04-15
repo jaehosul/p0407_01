@@ -14,7 +14,7 @@
 		where rnum>=#{startrow} and rnum<=#{endrow}
 	  ]]>
 	</select>
-
+ 
 	<!-- 전체리스트 개수 -->
 	<select id="listCount" resultType="int">
 		select count(*) from bidding_board
